@@ -23,11 +23,27 @@ new Swiper('.featured-projects', {
     pagination: {
         el: '.featured-projects__swiper-pagination',
         clickable: true,
-        bulletClass: 'swiper-pagination-bullet !bg-white',
-        bulletActiveClass: 'swiper-pagination-bullet-active !bg-primary',
     },
     navigation: {
         nextEl: '.featured-projects__swiper-button-next',
         prevEl: '.featured-projects__swiper-button-prev',
+    },
+});
+
+new Swiper('.expirence-slider', {
+    modules: [Navigation, Pagination, EffectFade],
+    autoHeight: true,
+    slidesPerView: 1,
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true,
+    },
+    pagination: {
+        el: '.expirence-slider__swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.expirence-slider__swiper-button-next',
+        prevEl: '.expirence-slider__swiper-button-prev',
     },
 });
