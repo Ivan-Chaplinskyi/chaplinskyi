@@ -6,3 +6,11 @@
   font-family: "BebasNeue Regular";
   src: url("./public/BebasNeue-Regular.ttf") format("ttf");
 }
+
+.swiper-pagination-bullet {
+  @apply bg-white !important;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-primary !important;
+}
