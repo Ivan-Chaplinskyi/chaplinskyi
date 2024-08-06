@@ -9,9 +9,9 @@
   <body class="bg-black text-text font-BebasNeue">
     <div id="app">
       <header class="flex justify-center py-[24px] w-full">
-        <m-header class="w-full max-w-xl flex justify-between items-center px-4">
+        <m-header class="w-full max-w-xl flex justify-between items-center px-4 gap-10">
           <h1 class="uppercase lg:text-[32px] font-normal">Ivan Chaplinskyi</h1>
-          <ul class="lg:flex hidden gap-[32px] font-medium">
+          <ul data-menu-list class="lg:flex lg:flex-wrap hidden gap-[32px] font-medium">
             <li class="hover:text-white ease-in duration-300 relative">
               <span class="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-primary opacity-75"></span>
               <span class="relative inline-flex rounded-full h-3 w-3 bg-primary top-[-5px]"></span>
@@ -19,10 +19,11 @@
             </li>
             <li class="hover:text-white ease-in duration-300"><a href="#featured-projects">Portfolio</a></li>
             <li class="hover:text-white ease-in duration-300"><a href="#expirence">Expirence</a></li>
-            <li class="hover:text-white ease-in duration-300"><a href="#about-me">About</a></li>
-            <!-- <li class="hover:text-white ease-in duration-300"><a href="">Contact</a></li> -->
+            <li class="hover:text-white ease-in duration-300"><a href="#about-me">About Me</a></li>
+            <li class="hover:text-white ease-in duration-300"><a href="#contact">Contact</a></li>
+            <li class="hover:text-white ease-in duration-300"><a href="#skills">My skills</a></li>
           </ul>
-          <div data-mobile-menu class="flex lg:hidden cursor-pointer">
+          <div data-mobile-menu="false" class="flex lg:hidden cursor-pointer">
             <svg width="44.000000" height="44.000000" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <defs>
                 <clipPath>
@@ -35,14 +36,7 @@
               </g>
             </svg>            
           </div>
-
-          <div data-mobile-menu-window class="hidden flex-col fixed">
-            <ul class="flex flex-col gap-[32px] font-medium">
-              <li><a href="">Work</a></li>
-              <li><a href="">About</a></li>
-              <li><a href="">Contact</a></li>
-            </ul>
-          </div>
+          <div class="backdrop-blur-sm hidden w-full h-full fixed top-0 left-0 z-10"></div>
         </m-header>
       </header>
       <main class="px-4 min-h-full max-w-xl mx-auto">
@@ -124,8 +118,8 @@
             <p class="max-w-md pl-[3px]">Here are some of the selected projects that demonstrate my passion for development.</p>
           </div>
           <div class="relative flex gap-10 justify-end mt-10">
-            <div class="featured-projects__swiper-button-prev swiper-button-prev !static !mt-0 !text-primary"></div>
-            <div class="featured-projects__swiper-button-next swiper-button-next !static !mt-0 !text-primary"></div>
+            <div class="featured-projects__swiper-button-prev swiper-button-prev !static !mt-0 !text-primary !z-0"></div>
+            <div class="featured-projects__swiper-button-next swiper-button-next !static !mt-0 !text-primary !z-0"></div>
           </div>
           <div class="swiper featured-projects mt-5 pl-[3px]">
             <div class="swiper-wrapper">
