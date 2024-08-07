@@ -1,4 +1,5 @@
 import './style.css';
+import './src/js/screen-loader.js';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
