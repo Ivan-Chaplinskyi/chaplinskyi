@@ -6,6 +6,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import './src/js/header.js';
 import './src/js/footer.js';
+import './src/js/scroll-to-top.js';
 import Swiper from "swiper";
 import { Navigation, Pagination, EffectFade, Autoplay } from 'swiper/modules';
 
