@@ -49,7 +49,7 @@
         </m-header>
       </header>
       <main class="px-4 min-h-full max-w-xl mx-auto">
-        <section class="flex justify-center w-full pt-8 pb-20">
+        <section class="flex justify-center w-full pt-8 lg:pb-20 pb-10">
           <div class="max-w-xl w-full flex lg:justify-between lg:items-start items-center lg:flex-row flex-col gap-6">
             <div class="self-center">
               <h2 class="text-white lg:text-[101px] text-[37px] font-normal uppercase lg:leading-[90px] leading-[40px]">Hi,
@@ -122,7 +122,7 @@
             </div>
           </div>
         </section>
-        <section id="featured-projects" class="py-20">
+        <section id="featured-projects" class="lg:py-20 py-10">
           <div>
             <h2 class="text-white font-normal lg:text-7xl text-3xl uppercase">Featured Projects</h2>
             <p class="max-w-md pl-[3px]">Here are some of the selected projects that demonstrate my passion for development.</p>
@@ -414,7 +414,7 @@
             <div class="featured-projects__swiper-pagination swiper-pagination !static mt-6"></div>
           </div>
         </section>
-        <section id="expirence" class="flex justify-between lg:flex-row flex-col gap-6 py-20">
+        <section id="expirence" class="flex justify-between lg:flex-row flex-col gap-6 lg:py-20 py-10">
           <h2 class="text-white font-normal lg:text-7xl text-3xl uppercase">My Experience</h2>
           <div class="expirence-slider swiper lg:max-w-[600px] !mx-0">
             <div class="swiper-wrapper">
@@ -528,7 +528,7 @@
             </div>
           </div>
         </section>
-        <section id="about-me" class="flex justify-between lg:flex-row flex-col gap-6 py-20">
+        <section id="about-me" class="flex justify-between lg:flex-row flex-col gap-6 lg:py-20 py-10">
           <h2 class="text-white font-normal lg:text-7xl text-3xl uppercase">About Me</h2>
           <p class="lg:max-w-[600px]">
             My goal is to develop and improve my skills in Full-Stack and Shopify development, bringing innovation and a high
@@ -551,6 +551,30 @@
         </m-footer>
       </footer>
     </div>
+    <scroll-top class="fixed right-3 bottom-3 z-10 border-primary border-solid rounded-full border-2 cursor-pointer hidden">
+      <svg class="-rotate-45" width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none"
+        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <clipPath id="clip7_370">
+            <rect id="arrow" width="20.000000" height="20.000000" transform="translate(10.000000 10.000000)" fill="white"
+              fill-opacity="0" />
+          </clipPath>
+          <clipPath id="clip7_368">
+            <rect id="circle" width="40.000000" height="40.000000" fill="white" fill-opacity="0" />
+          </clipPath>
+        </defs>
+        <g clip-path="url(#clip7_368)">
+          <circle id="dot" cx="20.000000" cy="20.000000" r="20.000000" fill="#0A0A0A" fill-opacity="1.000000" />
+          <rect id="arrow" width="20.000000" height="20.000000" transform="translate(10.000000 10.000000)" fill="#FFFFFF"
+            fill-opacity="0" />
+          <g clip-path="url(#clip7_370)">
+            <path id="Vector"
+              d="M14.99 26.01L23.58 17.41L23.58 23.65L25.25 23.65L25.25 14.57L16.16 14.57L16.16 16.24L22.4 16.24L13.81 24.83L14.99 26.01Z"
+              fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero" />
+          </g>
+        </g>
+      </svg>
+    </scroll-top>
     <script type="module" src="./main.js"></script>
   </body>
 </html>
