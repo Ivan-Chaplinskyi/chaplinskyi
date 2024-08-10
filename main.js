@@ -13,6 +13,8 @@ import { Navigation, Pagination, EffectFade, Autoplay } from 'swiper/modules';
 new Swiper('.featured-projects', {
     modules: [Navigation, Pagination, EffectFade, Autoplay],
     loop: true,
+    preloadImages: false,
+    lazy: true,
     autoHeight: true,
     autoplay: {
         delay: 5000,
