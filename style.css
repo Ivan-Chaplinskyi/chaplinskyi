@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "BebasNeue Regular";
+  src: url("./public/BebasNeue-Regular.ttf") format("ttf");
+}
+
+.swiper-pagination-bullet {
+  @apply bg-white !important;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-primary !important;
+}
+[data-mobile-menu="true"] {
+  @apply border-b-2 border-primary border-dotted;
+}
+
+.open-menu-list {
+  @apply fixed inline-flex flex-col w-fit right-0 p-5 bg-neutralBlack z-20 items-end;
+}

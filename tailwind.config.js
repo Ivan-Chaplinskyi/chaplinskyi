@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html"],
+  content: ["./index.html", "./main.js", "./src/js/*.js"],
   theme: {
     extend: {
       screens: {
@@ -8,6 +8,12 @@ export default {
         md: "768px",
         lg: "1024px",
         xl: "1440px",
+      },
+      maxWidth: {
+        sm: "480px",
+        md: "768px",
+        lg: "1024px",
+        xl: '1440px',
       },
       colors: {
         black: "#0A0A0A",
@@ -18,7 +24,10 @@ export default {
       },
       fontSize: {
         base: '16px'
-      }
+      },
+      fontFamily: {
+        BebasNeue: ['BebasNeue Regular', 'sans-serif'],
+      },
     },
   },
   plugins: [],

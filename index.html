@@ -1,15 +1,580 @@
 <!doctype html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/logo.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ivan Chaplinskyi</title>
   </head>
-  <body>
-    <div id="app" class="flex items-center justify-center w-full min-h-screen">
-      <h1>Coming Soon</h1>
+  <body class="bg-black text-text font-BebasNeue">
+    <screen-loader class="fixed w-full h-full top-0 left-0 bg-neutralBlack z-50 flex justify-center items-center">
+      <svg class="animate-spin h-5 w-5 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+        <path class="opacity-75" fill="currentColor"
+          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+        </path>
+      </svg>
+    </screen-loader>
+    <div id="app" style="display: none;">
+      <header class="flex justify-center py-[24px] w-full">
+        <m-header class="w-full max-w-xl flex justify-between items-center px-4 gap-10">
+          <h1 class="uppercase lg:text-[32px] font-normal">Ivan Chaplinskyi</h1>
+          <ul data-menu-list class="lg:flex lg:flex-wrap hidden gap-[32px] font-medium">
+            <li class="hover:text-white ease-in duration-300 relative">
+              <span class="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-primary opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-3 w-3 bg-primary top-[-5px]"></span>
+              <a href="/CV_Chaplinskyi.pdf" download>Download CV</a>
+            </li>
+            <li class="hover:text-white ease-in duration-300"><a href="#featured-projects">Portfolio</a></li>
+            <li class="hover:text-white ease-in duration-300"><a href="#expirence">Expirence</a></li>
+            <li class="hover:text-white ease-in duration-300"><a href="#about-me">About Me</a></li>
+            <!-- <li class="hover:text-white ease-in duration-300"><a href="#contact">Contact</a></li> -->
+            <li class="hover:text-white ease-in duration-300"><a href="https://www.linkedin.com/in/chaplinskyi/details/skills/"
+                target="_blank">My skills</a></li>
+          </ul>
+          <div data-mobile-menu="false" class="flex lg:hidden cursor-pointer">
+            <svg width="44.000000" height="44.000000" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <defs>
+                <clipPath>
+                  <rect width="44.000000" height="44.000000" fill="white" fill-opacity="0" />
+                </clipPath>
+              </defs>
+              <g clip-path="url(#clip7_357)">
+                <path d="M6 16L38 16" stroke="#C7C7C7" stroke-opacity="1.000000" stroke-width="2.000000" />
+                <path d="M6 28L38 28" stroke="#C7C7C7" stroke-opacity="1.000000" stroke-width="2.000000" />
+              </g>
+            </svg>            
+          </div>
+          <div class="backdrop-blur-sm hidden w-full h-full fixed top-0 left-0 z-10"></div>
+        </m-header>
+      </header>
+      <main class="px-4 min-h-full max-w-xl mx-auto">
+        <section class="flex justify-center w-full pt-8 lg:pb-20 pb-10">
+          <div class="max-w-xl w-full flex lg:justify-between lg:items-start items-center lg:flex-row flex-col gap-6">
+            <div class="self-center">
+              <h2 class="text-white lg:text-[101px] text-[37px] font-normal uppercase lg:leading-[90px] leading-[40px]">Hi,
+                I`m Ivan <br>
+                Chaplinskyi</h2>
+              <p class="mt-5 pl-[3px]">Front-End and Shopify Developer with more than 4 years of experience, having in-depth
+                knowledge
+                in front-end
+                development and store customization on the Shopify platform. Able to create aesthetically pleasing and highly
+                functional websites that meet client requirements and market standards.
+              </p>
+              <ul class="mt-10 flex align-center gap-2">
+                <li>
+                  <a href="https://t.me/ivanchaplinskyi" target="_blank"
+                    class="bg-primary text-black px-4 py-2 rounded-3xl	flex gap-[10px] items-center">
+                    Contact Me
+                    <svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none"
+                      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <defs>
+                        <clipPath>
+                          <rect width="20.000000" height="20.000000" transform="translate(10.000000 10.000000)"
+                            fill="white" fill-opacity="0" />
+                        </clipPath>
+                        <clipPath>
+                          <rect width="40.000000" height="40.000000" fill="white" fill-opacity="0" />
+                        </clipPath>
+                      </defs>
+                      <g clip-path="url(#clip7_368)">
+                        <circle cx="20.000000" cy="20.000000" r="20.000000" fill="#0A0A0A" fill-opacity="1.000000" />
+                        <rect width="20.000000" height="20.000000" transform="translate(10.000000 10.000000)"
+                          fill="#FFFFFF" fill-opacity="0" />
+                        <g clip-path="url(#clip7_370)">
+                          <path
+                            d="M14.99 26.01L23.58 17.41L23.58 23.65L25.25 23.65L25.25 14.57L16.16 14.57L16.16 16.24L22.4 16.24L13.81 24.83L14.99 26.01Z"
+                            fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero" />
+                        </g>
+                      </g>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/chaplinskyi/">
+                    <svg width="54.000000" height="54.000000" viewBox="0 0 54 54" fill="none"
+                      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <defs>
+                        <clipPath>
+                          <rect width="26.000000" height="26.000000"
+                            transform="translate(14.000002 14.000000)" fill="white" fill-opacity="0" />
+                        </clipPath>
+                      </defs>
+                      <rect rx="27.000000" width="54.000000" height="54.000000"
+                        transform="translate(0.000002 0.000000)" fill="#222222" fill-opacity="1.000000" />
+                      <rect width="26.000000" height="26.000000"
+                        transform="translate(14.000002 14.000000)" fill="#FFFFFF" fill-opacity="0" />
+                      <g clip-path="url(#clip7_71)">
+                        <path
+                          d="M21.76 19.42C21.76 20.73 20.7 21.79 19.39 21.79C18.08 21.79 17.02 20.73 17.02 19.42C17.02 18.11 18.08 17.05 19.39 17.05C20.7 17.05 21.76 18.11 21.76 19.42Z"
+                          fill="#D3E97A" fill-opacity="1.000000" fill-rule="evenodd" />
+                        <path
+                          d="M24 23.59L24 36.74L28.08 36.74L28.08 30.24C28.08 28.52 28.41 26.86 30.54 26.86C32.63 26.86 32.66 28.82 32.66 30.34L32.66 36.74L36.75 36.74L36.75 29.53C36.75 25.99 35.98 23.26 31.84 23.26C29.85 23.26 28.52 24.35 27.98 25.39L27.92 25.39L27.92 23.59L24 23.59ZM17.35 23.59L21.44 23.59L21.44 36.74L17.35 36.74L17.35 23.59Z"
+                          fill="#D3E97A" fill-opacity="1.000000" fill-rule="nonzero" />
+                      </g>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="lg:w-8/12 self-center hidden lg:block">
+              <img src="/ic.jpeg" class="rounded-3xl" width="600" height="700" alt="Ivan Chaplinskyi">
+            </div>
+          </div>
+        </section>
+        <section id="featured-projects" class="lg:py-20 py-10">
+          <div>
+            <h2 class="text-white font-normal lg:text-7xl text-3xl uppercase">Featured Projects</h2>
+            <p class="max-w-md pl-[3px]">Here are some of the selected projects that demonstrate my passion for development.</p>
+          </div>
+          <div class="relative flex gap-10 justify-end mt-10">
+            <div class="featured-projects__swiper-button-prev swiper-button-prev !static !mt-0 !text-primary !z-0"></div>
+            <div class="featured-projects__swiper-button-next swiper-button-next !static !mt-0 !text-primary !z-0"></div>
+          </div>
+          <div class="swiper featured-projects mt-5 pl-[3px]">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide !flex lg:flex-row flex-col gap-12">
+                <div class="flex lg:w-3/5">
+                  <img src="projects/lightbox.png" class="rounded-xl w-full object-contain" loading="lazy" width="486"
+                    height="347" alt="Lightbox">
+                </div>
+                <div class="flex flex-col justify-center gap-4 lg:w-2/5">
+                  <h3 class="text-white text-3xl font-medium">Lightbox</h3>
+                  <p>
+                    Project support, consultation, SEO optimization, bug fixes, delegation of tasks, creation of new
+                    sections.
+                  </p>
+                  <div class="flex justify-between gap-1 flex-wrap border-t border-b border-solid border-zinc-500 py-4">
+                    <span>Role:</span>
+                    <span>Main Shopify Developer</span>
+                  </div>
+                  <ul class="flex flex-wrap gap-4">
+                    <li class="w-fit">
+                      <a href="https://lightboxjewelry.com/"
+                        class="uppercase font-bold flex gap-1 items-center text-primary border-b-2 border-solid border-primary pb-1 hover:border-transparent transition duration-300 ease-in-out"
+                        target="_blank">Live
+                        Demo
+                        <svg class="animate-pulse" width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none"
+                          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <defs>
+                            <clipPath>
+                              <rect width="24.000000" height="24.000000" fill="white" fill-opacity="0" />
+                            </clipPath>
+                          </defs>
+                          <rect width="24.000000" height="24.000000" fill="#FFFFFF" fill-opacity="0" />
+                          <g clip-path="url(#clip7_108)">
+                            <path
+                              d="M5.98 19.21L16.3 8.9L16.3 16.38L18.3 16.38L18.3 5.48L7.4 5.48L7.4 7.48L14.88 7.48L4.57 17.8L5.98 19.21Z"
+                              fill="#D3E97A" fill-opacity="1.000000" fill-rule="nonzero" />
+                          </g>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="w-fit hidden">
+                      <a href=""
+                        class="uppercase font-bold flex gap-2 items-center text-primary border-b-2 border-solid border-primary pb-1 hover:border-transparent transition duration-300 ease-in-out"
+                        target="_blank">
+                        See on Github
+                        <svg width="21.610352" height="21.076660" viewBox="0 0 21.6104 21.0767" fill="none"
+                          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <desc>
+                            Created with Pixso.
+                          </desc>
+                          <defs />
+                          <path
+                            d="M10.8 0C4.83 0 0 4.83 0 10.8C0 15.57 3.09 19.62 7.38 21.05C7.92 21.15 8.12 20.82 8.12 20.53C8.12 20.28 8.11 19.6 8.11 18.7C5.1 19.35 4.47 17.25 4.47 17.25C3.98 16 3.27 15.67 3.27 15.67C2.29 14.99 3.34 15.01 3.34 15.01C4.43 15.09 5 16.12 5 16.12C5.96 17.77 7.53 17.3 8.14 17.02C8.24 16.32 8.52 15.85 8.83 15.58C6.43 15.3 3.91 14.38 3.91 10.24C3.91 9.06 4.33 8.09 5.02 7.34C4.91 7.06 4.53 5.96 5.12 4.48C5.12 4.48 6.03 4.19 8.1 5.58C8.98 5.34 9.89 5.22 10.8 5.22C11.71 5.22 12.62 5.34 13.5 5.58C15.57 4.19 16.47 4.48 16.47 4.48C17.06 5.96 16.69 7.06 16.58 7.34C17.27 8.09 17.69 9.06 17.69 10.24C17.69 14.39 15.17 15.3 12.76 15.57C13.14 15.9 13.49 16.56 13.49 17.57C13.49 19.01 13.48 20.18 13.48 20.53C13.48 20.82 13.67 21.16 14.22 21.05C18.51 19.62 21.61 15.57 21.61 10.8C21.61 4.83 16.77 0 10.8 0Z"
+                            fill="#D3E97A" fill-opacity="1.000000" fill-rule="evenodd" />
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="swiper-slide !flex lg:flex-row flex-col gap-12">
+                <div class="flex lg:w-3/5">
+                  <img src="projects/bru.png" class="rounded-xl w-full object-contain" loading="lazy" width="486" height="347" alt="Bru">
+                  </div>
+                  <div class="flex flex-col justify-center gap-4 lg:w-2/5">
+                    <h3 class="text-white text-3xl font-medium">Bru Shop</h3>
+                    <p>
+                      Project support, consultation, SEO optimization, bug fixes, creation of new
+                      sections.
+                    </p>
+                    <div class="flex justify-between gap-1 flex-wrap border-t border-b border-solid border-zinc-500 py-4">
+                      <span>Role:</span>
+                      <span>Shopify Developer</span>
+                    </div>
+                    <ul class="flex flex-wrap gap-4">
+                      <li class="w-fit">
+                        <a href="https://bru.shop/"
+                          class="uppercase font-bold flex gap-1 items-center text-primary border-b-2 border-solid border-primary pb-1 hover:border-transparent transition duration-300 ease-in-out"
+                          target="_blank">Live
+                          Demo
+                          <svg class="animate-pulse" width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs>
+                              <clipPath>
+                                <rect width="24.000000" height="24.000000" fill="white" fill-opacity="0" />
+                              </clipPath>
+                            </defs>
+                            <rect width="24.000000" height="24.000000" fill="#FFFFFF" fill-opacity="0" />
+                            <g clip-path="url(#clip7_108)">
+                              <path
+                                d="M5.98 19.21L16.3 8.9L16.3 16.38L18.3 16.38L18.3 5.48L7.4 5.48L7.4 7.48L14.88 7.48L4.57 17.8L5.98 19.21Z"
+                                fill="#D3E97A" fill-opacity="1.000000" fill-rule="nonzero" />
+                            </g>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="w-fit hidden">
+                        <a href=""
+                          class="uppercase font-bold flex gap-2 items-center text-primary border-b-2 border-solid border-primary pb-1 hover:border-transparent transition duration-300 ease-in-out"
+                          target="_blank">
+                          See on Github
+                          <svg width="21.610352" height="21.076660" viewBox="0 0 21.6104 21.0767" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <desc>
+                              Created with Pixso.
+                            </desc>
+                            <defs />
+                            <path
+                              d="M10.8 0C4.83 0 0 4.83 0 10.8C0 15.57 3.09 19.62 7.38 21.05C7.92 21.15 8.12 20.82 8.12 20.53C8.12 20.28 8.11 19.6 8.11 18.7C5.1 19.35 4.47 17.25 4.47 17.25C3.98 16 3.27 15.67 3.27 15.67C2.29 14.99 3.34 15.01 3.34 15.01C4.43 15.09 5 16.12 5 16.12C5.96 17.77 7.53 17.3 8.14 17.02C8.24 16.32 8.52 15.85 8.83 15.58C6.43 15.3 3.91 14.38 3.91 10.24C3.91 9.06 4.33 8.09 5.02 7.34C4.91 7.06 4.53 5.96 5.12 4.48C5.12 4.48 6.03 4.19 8.1 5.58C8.98 5.34 9.89 5.22 10.8 5.22C11.71 5.22 12.62 5.34 13.5 5.58C15.57 4.19 16.47 4.48 16.47 4.48C17.06 5.96 16.69 7.06 16.58 7.34C17.27 8.09 17.69 9.06 17.69 10.24C17.69 14.39 15.17 15.3 12.76 15.57C13.14 15.9 13.49 16.56 13.49 17.57C13.49 19.01 13.48 20.18 13.48 20.53C13.48 20.82 13.67 21.16 14.22 21.05C18.51 19.62 21.61 15.57 21.61 10.8C21.61 4.83 16.77 0 10.8 0Z"
+                              fill="#D3E97A" fill-opacity="1.000000" fill-rule="evenodd" />
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  </div>
+                  <div class="swiper-slide !flex lg:flex-row flex-col gap-12">
+                    <div class="flex lg:w-3/5">
+                  <img src="projects/oleus.png" class="rounded-xl w-full object-contain" loading="lazy" width="486" height="347"
+                    alt="Oleus">
+                </div>
+                <div class="flex flex-col justify-center gap-4 lg:w-2/5">
+                  <h3 class="text-white text-3xl font-medium">Oleus</h3>
+                  <p>Full transition to Online Store 2.0, SEO optimization, project support, consultation, creation of new
+                    sections, bug fixes.</p>
+                  <div class="flex justify-between gap-1 flex-wrap border-t border-b border-solid border-zinc-500 py-4">
+                    <span>Role:</span>
+                    <span>Shopify Developer</span>
+                  </div>
+                  <ul class="flex flex-wrap gap-4">
+                    <li class="w-fit">
+                      <a href="https://oleus.com/"
+                        class="uppercase font-bold flex gap-1 items-center text-primary border-b-2 border-solid border-primary pb-1 hover:border-transparent transition duration-300 ease-in-out"
+                        target="_blank">Live
+                        Demo
+                        <svg class="animate-pulse" width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none"
+                          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <defs>
+                            <clipPath>
+                              <rect width="24.000000" height="24.000000" fill="white" fill-opacity="0" />
+                            </clipPath>
+                          </defs>
+                          <rect width="24.000000" height="24.000000" fill="#FFFFFF" fill-opacity="0" />
+                          <g clip-path="url(#clip7_108)">
+                            <path
+                              d="M5.98 19.21L16.3 8.9L16.3 16.38L18.3 16.38L18.3 5.48L7.4 5.48L7.4 7.48L14.88 7.48L4.57 17.8L5.98 19.21Z"
+                              fill="#D3E97A" fill-opacity="1.000000" fill-rule="nonzero" />
+                          </g>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="w-fit hidden">
+                      <a href=""
+                        class="uppercase font-bold flex gap-2 items-center text-primary border-b-2 border-solid border-primary pb-1 hover:border-transparent transition duration-300 ease-in-out"
+                        target="_blank">
+                        See on Github
+                        <svg width="21.610352" height="21.076660" viewBox="0 0 21.6104 21.0767" fill="none"
+                          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <desc>
+                            Created with Pixso.
+                          </desc>
+                          <defs />
+                          <path
+                            d="M10.8 0C4.83 0 0 4.83 0 10.8C0 15.57 3.09 19.62 7.38 21.05C7.92 21.15 8.12 20.82 8.12 20.53C8.12 20.28 8.11 19.6 8.11 18.7C5.1 19.35 4.47 17.25 4.47 17.25C3.98 16 3.27 15.67 3.27 15.67C2.29 14.99 3.34 15.01 3.34 15.01C4.43 15.09 5 16.12 5 16.12C5.96 17.77 7.53 17.3 8.14 17.02C8.24 16.32 8.52 15.85 8.83 15.58C6.43 15.3 3.91 14.38 3.91 10.24C3.91 9.06 4.33 8.09 5.02 7.34C4.91 7.06 4.53 5.96 5.12 4.48C5.12 4.48 6.03 4.19 8.1 5.58C8.98 5.34 9.89 5.22 10.8 5.22C11.71 5.22 12.62 5.34 13.5 5.58C15.57 4.19 16.47 4.48 16.47 4.48C17.06 5.96 16.69 7.06 16.58 7.34C17.27 8.09 17.69 9.06 17.69 10.24C17.69 14.39 15.17 15.3 12.76 15.57C13.14 15.9 13.49 16.56 13.49 17.57C13.49 19.01 13.48 20.18 13.48 20.53C13.48 20.82 13.67 21.16 14.22 21.05C18.51 19.62 21.61 15.57 21.61 10.8C21.61 4.83 16.77 0 10.8 0Z"
+                            fill="#D3E97A" fill-opacity="1.000000" fill-rule="evenodd" />
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="swiper-slide !flex lg:flex-row flex-col gap-12">
+                <div class="flex lg:w-3/5">
+                  <img src="projects/missoma.png" class="rounded-xl w-full object-contain" loading="lazy" width="486"
+                    height="347" alt="Missoma">
+                </div>
+                <div class="flex flex-col justify-center gap-4 lg:w-2/5">
+                  <h3 class="text-white text-3xl font-medium">Missoma</h3>
+                  <p>Bug fixes with Google Tag Manager</p>
+                  <div class="flex justify-between gap-1 flex-wrap border-t border-b border-solid border-zinc-500 py-4">
+                    <span>Role:</span>
+                    <span>Shopify Developer</span>
+                  </div>
+                  <ul class="flex flex-wrap gap-4">
+                    <li class="w-fit">
+                      <a href="https://www.missoma.com/"
+                        class="uppercase font-bold flex gap-1 items-center text-primary border-b-2 border-solid border-primary pb-1 hover:border-transparent transition duration-300 ease-in-out"
+                        target="_blank">Live
+                        Demo
+                        <svg class="animate-pulse" width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none"
+                          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <defs>
+                            <clipPath>
+                              <rect width="24.000000" height="24.000000" fill="white" fill-opacity="0" />
+                            </clipPath>
+                          </defs>
+                          <rect width="24.000000" height="24.000000" fill="#FFFFFF" fill-opacity="0" />
+                          <g clip-path="url(#clip7_108)">
+                            <path
+                              d="M5.98 19.21L16.3 8.9L16.3 16.38L18.3 16.38L18.3 5.48L7.4 5.48L7.4 7.48L14.88 7.48L4.57 17.8L5.98 19.21Z"
+                              fill="#D3E97A" fill-opacity="1.000000" fill-rule="nonzero" />
+                          </g>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="w-fit hidden">
+                      <a href=""
+                        class="uppercase font-bold flex gap-2 items-center text-primary border-b-2 border-solid border-primary pb-1 hover:border-transparent transition duration-300 ease-in-out"
+                        target="_blank">
+                        See on Github
+                        <svg width="21.610352" height="21.076660" viewBox="0 0 21.6104 21.0767" fill="none"
+                          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <desc>
+                            Created with Pixso.
+                          </desc>
+                          <defs />
+                          <path
+                            d="M10.8 0C4.83 0 0 4.83 0 10.8C0 15.57 3.09 19.62 7.38 21.05C7.92 21.15 8.12 20.82 8.12 20.53C8.12 20.28 8.11 19.6 8.11 18.7C5.1 19.35 4.47 17.25 4.47 17.25C3.98 16 3.27 15.67 3.27 15.67C2.29 14.99 3.34 15.01 3.34 15.01C4.43 15.09 5 16.12 5 16.12C5.96 17.77 7.53 17.3 8.14 17.02C8.24 16.32 8.52 15.85 8.83 15.58C6.43 15.3 3.91 14.38 3.91 10.24C3.91 9.06 4.33 8.09 5.02 7.34C4.91 7.06 4.53 5.96 5.12 4.48C5.12 4.48 6.03 4.19 8.1 5.58C8.98 5.34 9.89 5.22 10.8 5.22C11.71 5.22 12.62 5.34 13.5 5.58C15.57 4.19 16.47 4.48 16.47 4.48C17.06 5.96 16.69 7.06 16.58 7.34C17.27 8.09 17.69 9.06 17.69 10.24C17.69 14.39 15.17 15.3 12.76 15.57C13.14 15.9 13.49 16.56 13.49 17.57C13.49 19.01 13.48 20.18 13.48 20.53C13.48 20.82 13.67 21.16 14.22 21.05C18.51 19.62 21.61 15.57 21.61 10.8C21.61 4.83 16.77 0 10.8 0Z"
+                            fill="#D3E97A" fill-opacity="1.000000" fill-rule="evenodd" />
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="swiper-slide !flex lg:flex-row flex-col gap-12">
+                <div class="flex lg:w-3/5">
+                  <img src="projects/aroma.png" class="rounded-xl w-full object-contain" loading="lazy" width="486" height="347"
+                    alt="Aromatherapy Associates">
+                </div>
+                <div class="flex flex-col justify-center gap-4 lg:w-2/5">
+                  <h3 class="text-white text-3xl font-medium">Aromatherapy Associates</h3>
+                  <p>Project support, consultation, SEO optimization, bug fixes, creation of new
+                    sections.</p>
+                  <div class="flex justify-between gap-1 flex-wrap border-t border-b border-solid border-zinc-500 py-4">
+                    <span>Role:</span>
+                    <span>Shopify Developer</span>
+                  </div>
+                  <ul class="flex flex-wrap gap-4">
+                    <li class="w-fit">
+                      <a href="https://www.aromatherapyassociates.com/"
+                        class="uppercase font-bold flex gap-1 items-center text-primary border-b-2 border-solid border-primary pb-1 hover:border-transparent transition duration-300 ease-in-out"
+                        target="_blank">Live
+                        Demo
+                        <svg class="animate-pulse" width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none"
+                          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <defs>
+                            <clipPath>
+                              <rect width="24.000000" height="24.000000" fill="white" fill-opacity="0" />
+                            </clipPath>
+                          </defs>
+                          <rect width="24.000000" height="24.000000" fill="#FFFFFF" fill-opacity="0" />
+                          <g clip-path="url(#clip7_108)">
+                            <path
+                              d="M5.98 19.21L16.3 8.9L16.3 16.38L18.3 16.38L18.3 5.48L7.4 5.48L7.4 7.48L14.88 7.48L4.57 17.8L5.98 19.21Z"
+                              fill="#D3E97A" fill-opacity="1.000000" fill-rule="nonzero" />
+                          </g>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="w-fit hidden">
+                      <a href=""
+                        class="uppercase font-bold flex gap-2 items-center text-primary border-b-2 border-solid border-primary pb-1 hover:border-transparent transition duration-300 ease-in-out"
+                        target="_blank">
+                        See on Github
+                        <svg width="21.610352" height="21.076660" viewBox="0 0 21.6104 21.0767" fill="none"
+                          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <desc>
+                            Created with Pixso.
+                          </desc>
+                          <defs />
+                          <path
+                            d="M10.8 0C4.83 0 0 4.83 0 10.8C0 15.57 3.09 19.62 7.38 21.05C7.92 21.15 8.12 20.82 8.12 20.53C8.12 20.28 8.11 19.6 8.11 18.7C5.1 19.35 4.47 17.25 4.47 17.25C3.98 16 3.27 15.67 3.27 15.67C2.29 14.99 3.34 15.01 3.34 15.01C4.43 15.09 5 16.12 5 16.12C5.96 17.77 7.53 17.3 8.14 17.02C8.24 16.32 8.52 15.85 8.83 15.58C6.43 15.3 3.91 14.38 3.91 10.24C3.91 9.06 4.33 8.09 5.02 7.34C4.91 7.06 4.53 5.96 5.12 4.48C5.12 4.48 6.03 4.19 8.1 5.58C8.98 5.34 9.89 5.22 10.8 5.22C11.71 5.22 12.62 5.34 13.5 5.58C15.57 4.19 16.47 4.48 16.47 4.48C17.06 5.96 16.69 7.06 16.58 7.34C17.27 8.09 17.69 9.06 17.69 10.24C17.69 14.39 15.17 15.3 12.76 15.57C13.14 15.9 13.49 16.56 13.49 17.57C13.49 19.01 13.48 20.18 13.48 20.53C13.48 20.82 13.67 21.16 14.22 21.05C18.51 19.62 21.61 15.57 21.61 10.8C21.61 4.83 16.77 0 10.8 0Z"
+                            fill="#D3E97A" fill-opacity="1.000000" fill-rule="evenodd" />
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="featured-projects__swiper-pagination swiper-pagination !static mt-6"></div>
+          </div>
+        </section>
+        <section id="expirence" class="flex justify-between lg:flex-row flex-col gap-6 lg:py-20 py-10">
+          <h2 class="text-white font-normal lg:text-7xl text-3xl uppercase">My Experience</h2>
+          <div class="expirence-slider swiper lg:max-w-[600px] !mx-0">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="flex justify-between gap-2 flex-wrap">
+                  <h3 class="text-2xl">Shopify Developer</h3>
+                  <span>March 2024 - June 2024</span>
+                </div>
+                <h4 class="text-primary text-1xl font-semibold mt-2">Synov: E-Commerce Marketing Agency | Full-time</h4>
+                <p class="mt-3">
+                  Development and customization of themes:
+                  Creating and customizing unique Shopify themes, according to the client's needs and in line with the brand
+                  style.
+                  Utilizing Liquid language for efficient implementation of changes and dynamic content.
+                  Responsive and cross-browser design:
+                  Developing themes that work optimally on different devices and in different browsers.
+                  Ensure fast loading speeds and excellent user experience.
+                  Extension of functionality:
+                  Integration and customization of various applications and plugins to extend the functionality of the store.
+                  Creation and integration of additional blocks, elements, and custom functions.
+                  Optimization for SEO:
+                  Using the best practices to optimize the theme for search engines and improve the store's position in search
+                  results.
+                  Technical support:
+                  Providing technical support and solving problems during operation.
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <div class="flex justify-between gap-2 flex-wrap">
+                  <h3 class="text-2xl">Shopify Developer</h3>
+                  <span>January 2024 - March 2024</span>
+                </div>
+                <h4 class="text-primary text-1xl font-semibold mt-2">agenturro | Part-time</h4>
+                <p class="mt-3">
+                  Creating new sections, debugging the code, customizing the store.
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <div class="flex justify-between gap-2 flex-wrap">
+                  <h3 class="text-2xl	">Front-End Developer</h3>
+                  <span>January 2024 - March 2024</span>
+                </div>
+                <h4 class="text-primary text-1xl font-semibold mt-2">Freelance project</h4>
+                <p class="mt-3">
+                  Creating new sections, debugging the code, customizing the store.
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <div class="flex justify-between gap-2 flex-wrap">
+                  <h3 class="text-2xl	">Shopify Developer</h3>
+                  <span>May 2023 - January 2024</span>
+                </div>
+                <h4 class="text-primary text-1xl font-semibold mt-2">IT Squad | Full-time</h4>
+                <p class="mt-3">
+                  Development and customization of themes:
+                  Creating and customizing unique Shopify themes, according to the client's needs and in line with the brand
+                  style.
+                  Utilizing Liquid language for efficient implementation of changes and dynamic content.
+                  Responsive and cross-browser design:
+                  Developing themes that work optimally on different devices and in different browsers.
+                  Ensure fast loading speeds and excellent user experience.
+                  Extension of functionality:
+                  Integration and customization of various applications and plugins to extend the functionality of the store.
+                  Creation and integration of additional blocks, elements, and custom functions.
+                  Optimization for SEO:
+                  Using the best practices to optimize the theme for search engines and improve the store's position in search
+                  results.
+                  Technical support:
+                  Providing technical support and solving problems during operation.
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <div class="flex justify-between gap-2 flex-wrap">
+                  <h3 class="text-2xl	">Shopify Developer</h3>
+                  <span>June 2022 - April 2023</span>
+                </div>
+                <h4 class="text-primary text-1xl font-semibold mt-2">MGROUP (Shopify Agency) | Full-time</h4>
+                <p class="mt-3">
+                  Development and customization of themes:
+                  Creating and customizing unique Shopify themes, according to the client's needs and in line with the brand
+                  style.
+                  Utilizing Liquid language for efficient implementation of changes and dynamic content.
+                  Responsive and cross-browser design:
+                  Developing themes that work optimally on different devices and in different browsers.
+                  Ensure fast loading speeds and excellent user experience.
+                  Extension of functionality:
+                  Integration and customization of various applications and plugins to extend the functionality of the store.
+                  Creation and integration of additional blocks, elements, and custom functions.
+                  Optimization for SEO:
+                  Using the best practices to optimize the theme for search engines and improve the store's position in search
+                  results.
+                  Technical support:
+                  Providing technical support and solving problems during operation.
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <div class="flex justify-between gap-2 flex-wrap">
+                  <h3 class="text-2xl	">Front-End Developer</h3>
+                  <span>November 2020 - February 2022</span>
+                </div>
+                <h4 class="text-primary text-1xl font-semibold mt-2">Self-employed</h4>
+                <p class="mt-3">
+                  Creating a landing page. SEO optimization.
+                </p>
+              </div>
+            </div>
+            <div class="flex justify-between items-center mt-4">
+              <div class="expirence-slider__swiper-button-prev swiper-button-prev !mt-0 !static !text-primary"></div>
+              <div class="expirence-slider__swiper-pagination swiper-pagination !static"></div>
+              <div class="expirence-slider__swiper-button-next swiper-button-next !mt-0 !static !text-primary"></div>
+            </div>
+          </div>
+        </section>
+        <section id="about-me" class="flex justify-between lg:flex-row flex-col gap-6 lg:py-20 py-10">
+          <h2 class="text-white font-normal lg:text-7xl text-3xl uppercase">About Me</h2>
+          <p class="lg:max-w-[600px]">
+            My goal is to develop and improve my skills in Full-Stack and Shopify development, bringing innovation and a high
+            level of professionalism to the projects I work on. I intend to further deepen my understanding of modern
+            technologies, increase the efficiency of workflows and provide quality solutions for clients.
+        
+            In particular, I aim to develop my skills in Full-Stack development, using the latest technologies and frameworks to
+            create intuitive and aesthetic web interfaces. In the field of Shopify development, I plan to deepen my
+            understanding of the platform and implement best practices to create efficient and successful online stores.
+        
+            My goal is to create products that not only meet the needs of customers, but also impress them with high quality,
+            speed, and user experience. I believe in continuous self-improvement and teamwork to achieve common goals and
+            further development in the field of web development.
+          </p>
+        </section>
+      </main>
+      <footer class="px-4 py-10 flex justify-center">
+        <m-footer>
+          <p>© <span></span> Ivan Chaplinskyi</p>
+        </m-footer>
+      </footer>
     </div>
+    <scroll-top class="fixed right-3 bottom-3 z-10 border-primary border-solid rounded-full border-2 cursor-pointer hidden">
+      <svg class="-rotate-45" width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none"
+        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <clipPath id="clip7_370">
+            <rect id="arrow" width="20.000000" height="20.000000" transform="translate(10.000000 10.000000)" fill="white"
+              fill-opacity="0" />
+          </clipPath>
+          <clipPath id="clip7_368">
+            <rect id="circle" width="40.000000" height="40.000000" fill="white" fill-opacity="0" />
+          </clipPath>
+        </defs>
+        <g clip-path="url(#clip7_368)">
+          <circle id="dot" cx="20.000000" cy="20.000000" r="20.000000" fill="#0A0A0A" fill-opacity="1.000000" />
+          <rect id="arrow" width="20.000000" height="20.000000" transform="translate(10.000000 10.000000)" fill="#FFFFFF"
+            fill-opacity="0" />
+          <g clip-path="url(#clip7_370)">
+            <path id="Vector"
+              d="M14.99 26.01L23.58 17.41L23.58 23.65L25.25 23.65L25.25 14.57L16.16 14.57L16.16 16.24L22.4 16.24L13.81 24.83L14.99 26.01Z"
+              fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero" />
+          </g>
+        </g>
+      </svg>
+    </scroll-top>
     <script type="module" src="./main.js"></script>
   </body>
 </html>
